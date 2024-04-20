@@ -1,4 +1,8 @@
-body {
+/*body {
+
+}*/
+
+.App {
   background: linear-gradient(to right, 
   rgb(191, 33, 47) 0%, 
   rgb(191, 33, 47) 33.3%, 
@@ -6,10 +10,9 @@ body {
   rgb(0, 111, 60) 66.6%, 
   rgb(38, 75, 150) 66.6%, 
   rgb(38, 75, 150) 100%);
-}
-
-.App {
   text-align: center;
+  height: 100vh; /* Set height to 100% of viewport height */
+  width: 100vw; 
 }
 
 .image{
@@ -20,7 +23,7 @@ body {
   text-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
 }
 
-.button{
+.button, .reset-button{
   background-color: #cc0000;
   color: white;
   border: none;
@@ -31,6 +34,14 @@ body {
   cursor: pointer;
   margin: 8px;
   vertical-align: top;
+}
+
+.button:hover{
+  opacity:0.8;
+}
+
+.button:active{
+  opacity:0.5;
 }
 
 .input {
