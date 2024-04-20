@@ -83,6 +83,8 @@ function App() {
     'Sally Wu': 'name1',
     'Xiaomin Yu': 'name2',
     'Kylie Wong': 'name3',
+    'Nathan Galedo': 'name3',
+    'Sean Batoon': 'name1',
 
     'Christine Liau': 'name1',
     'Christine Palmeri': 'name1',
