@@ -34,6 +34,7 @@
   cursor: pointer;
   margin: 8px;
   vertical-align: top;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
 }
 
 .button:hover{
@@ -45,8 +46,7 @@
 }
 
 .input {
-  background-color: #cc0000;
-  color: white;
+  background-color: white;
   border: none;
   padding: 9px 16px;
   border-radius: 18px;
@@ -55,11 +55,12 @@
   cursor: text;
   margin: 8px;
   vertical-align: top;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
 }
 
 input[type="text"]::placeholder {
-  color: white;
-  opacity: .8;
+  color: black;
+  opacity: .6;
 }
 
 input[type="text"]:focus {

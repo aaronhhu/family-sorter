@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
-import pokeball from './pokeball.webp';
+import thinking from './thinking.webp';
 
 import charizard from './charizard.gif'
 import blastoise from './blastoise.gif'
@@ -8,16 +8,25 @@ import venusaur from './venusaur.gif'
 import blossom from './blossom.gif'
 import bubbles from './bubbles.gif'
 import buttercup from './buttercup.gif'
+import winter from './winter.gif'
+import chaewon from './chaewon.gif'
+import redR from './redranger.gif'
+import greenR from './rangergreen.gif'
+import blueR from './blueranger.gif'
+import redT from './redtubby.gif'
+import blueT from './bluetubby.gif'
+import greenT from './greentubby.gif'
+
 
 function App() {
   // State to hold the input name
   const [name, setName] = useState('');
 
   // State to hold the image source
-  const [imageSrc, setImageSrc] = useState(pokeball); // Set default image path
+  const [imageSrc, setImageSrc] = useState(thinking); // Set default image path
 
   // State to hold the heading text
-  const [headingText, setHeadingText] = useState('What fam are you in?'); // Set default heading text
+  const [headingText, setHeadingText] = useState('What family are you in?'); // Set default heading text
 
   const [bgcolor, setBgColor] = useState("");
 
@@ -33,9 +42,9 @@ function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const imagePathsTight = [charizard, blossom]; // Add your image paths here
-    const imagePathsLoose = [blastoise, bubbles];
-    const imagePathsClose = [venusaur, buttercup];
+    const imagePathsTight = [charizard, blossom, redR, redT]; // Add your image paths here
+    const imagePathsLoose = [blastoise, bubbles, blueR, blueT];
+    const imagePathsClose = [venusaur, buttercup, greenR, greenT];
 
     // Randomly select an image path from the array
     const randomIndex = Math.floor(Math.random() * imagePathsTight.length);
@@ -64,6 +73,17 @@ function App() {
     'Vivian Shen': 'name2',
     
     'Aaron Hu': 'name1',
+    'Adam Foronda': 'name2',
+    'Winter': 'name4',
+    'Chaewon': 'name5',
+    'Richard Kim': 'name2',
+    'Kent Batoon': 'name1',
+    'Brendan Lin': 'name1',
+    'Esther Lee': 'name3',
+    'Sally Wu': 'name1',
+    'Xiaomin Yu': 'name2',
+    'Kylie Wong': 'name3',
+
     'Christine Liau': 'name1',
     'Christine Palmeri': 'name1',
     'Cindy Li': 'name1',
@@ -118,12 +138,22 @@ function App() {
         break;
       case 'name3':
         imageSrc = randomImagePathClose; // Update with your image path for fam 3
-        headingText = '\uD83D\uDC9A AWW YOU\'RE IN CLOSE FAM! \uD83D\uDC9A';
+        headingText = '\uD83D\uDC9A YAYY YOU\'RE IN CLOSE FAM! \uD83D\uDC9A';
         setBgColor('rgb(0, 111, 60)');
+        break;
+      case 'name4':
+        imageSrc = winter;
+        headingText = 'aint no way bro';
+        setBgColor('blanchedalmond')
+        break;
+      case 'name5':
+        imageSrc = chaewon;
+        headingText = 'aint no way bro';
+        setBgColor('blanchedalmond');
         break;
       default:
         // If name doesn't match any, display default values
-        imageSrc = pokeball; // Update with your default image path
+        imageSrc = thinking; // Update with your default image path
         headingText = 'Name Not Found';
         setBgColor(`linear-gradient(to right, 
           rgb(191, 33, 47) 0%, 
@@ -145,7 +175,7 @@ function App() {
 
 const handleReset = () => {
   setName('');
-  setImageSrc(pokeball);
+  setImageSrc(thinking);
   setHeadingText('What fam are you in?');
   setBgColor(`linear-gradient(to right, 
     rgb(191, 33, 47) 0%, 
