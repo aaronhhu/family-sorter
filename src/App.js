@@ -8,8 +8,6 @@ import venusaur from './venusaur.gif'
 import blossom from './blossom.gif'
 import bubbles from './bubbles.gif'
 import buttercup from './buttercup.gif'
-import winter from './winter.gif'
-import chaewon from './chaewon.gif'
 import redR from './redranger.gif'
 import greenR from './rangergreen.gif'
 import blueR from './blueranger.gif'
@@ -26,7 +24,7 @@ function App() {
   const [imageSrc, setImageSrc] = useState(thinking); // Set default image path
 
   // State to hold the heading text
-  const [headingText, setHeadingText] = useState('What family are you in?'); // Set default heading text
+  const [headingText, setHeadingText] = useState('\uD83D\uDC40 What family are you in? \uD83D\uDC40'); // Set default heading text
 
   const [bgcolor, setBgColor] = useState("");
 
@@ -53,59 +51,43 @@ function App() {
     const randomImagePathClose = imagePathsClose[randomIndex];
 
     const nameMappings = {
-    'Anthony Doan': 'name2',
-    'Billy Gozali': 'name2',
-    'Brandon Chan': 'name2',
-    'Charleen Madayag': 'name2',
-    'Christy Lu': 'name2',
-    'David Malonzo': 'name2',
-    'Durell Freeman': 'name2',
-    'Kaden Nohara': 'name2',
-    'Fiona Lee': 'name2',
-    'Gobind Kapoor': 'name2',
-    'Hannah Liu': 'name2',
-    'Hardy Situ': 'name2',
-    'Hillary Nguyen': 'name2',
-    'Hsieh Cheng Yen': 'name2',
-    'Jonathan Ngo': 'name2',
-    'Lauren Lai': 'name2',
-    'Michael Tanaputra': 'name2',
-    'Vivian Shen': 'name2',
-    
-    'Aaron Hu': 'name1',
-    'Adam Foronda': 'name2',
-    'Winter': 'name4',
-    'Chaewon': 'name5',
-    'Richard Kim': 'name2',
-    'Kent Batoon': 'name1',
-    'Brendan Lin': 'name1',
-    'Esther Lee': 'name3',
-    'Sally Wu': 'name1',
-    'Xiaomin Yu': 'name2',
-    'Kylie Wong': 'name3',
-    'Nathan Galedo': 'name3',
-    'Sean Batoon': 'name1',
+    'christopher trang': 'name2',
+    'max xu': 'name2',
+    'siddhanth iyer': 'name2',
+    'maya ham': 'name2',
+    'kiana sueyoshi': 'name2',
+    'kelly luo': 'name2',
+    'kathryn galdamez': 'name2',
+    'katherine sha': 'name2',
+    'jonathan lew': 'name2',
+    'joannie chang': 'name2',
+    'jason huang': 'name2',
+    'evelyn fuentes': 'name2',
+    'emma luong': 'name2',
+    'emily espinosa': 'name2',
+    'dylan slen': 'name2',
+    'andrew dang': 'name2',
+    'grace lim': 'name2',
 
-    'Christine Liau': 'name1',
-    'Christine Palmeri': 'name1',
-    'Cindy Li': 'name1',
-    'Colleen McKenna': 'name1',
-    'Elson Wong': 'name1',
-    'Janice Chen': 'name1',
-    'Jatziri Gonzalez': 'name1',
-    'Jordan Ng': 'name1',
-    'Kylie Tzeng': 'name1',
-    'Loc Vo': 'name1',
-    'Madison Liang': 'name1',
-    'Nathan Guan': 'name1',
-    'Tisha Kathrani': 'name1',
-  
-    'Carla Basurto': 'name3',
-    'Emily Le': 'name3',
-    'Jade Lee': 'name3',
-    'Nicholas Mah': 'name3',
-    'Sandy Yu': 'name3',
-    'Tony Zhong': 'name3'
+    'tammy wong': 'name1',
+    'terrie kim': 'name1',
+    'tina lei': 'name1',
+    'saaniya patwardhan': 'name1',
+    'nicole chen': 'name1',
+    'karissa suzuki': 'name1',
+    'jenny wu': 'name1',
+    'jayson astor': 'name1',
+    'ethan lee': 'name1',
+    'arpana tamang': 'name1',
+
+    'alyssa lee': 'name3',
+    'amy wang': 'name3',
+    'ana mariela gamboa': 'name3',
+    'jessica ting': 'name3',
+    'wavan liu': 'name3',
+    'sean elmore': 'name3',
+
+    'amy gonzalez': 'name2'
     };
   
     // Sample list of names
@@ -122,7 +104,7 @@ function App() {
   
   console.log(mappedNames);
 
-  const nameIdentifier = getNameMapping(name);
+  const nameIdentifier = getNameMapping(name.toLowerCase());
 
     // Logic to determine the screen based on the entered name
     let imageSrc, headingText;
@@ -142,16 +124,6 @@ function App() {
         imageSrc = randomImagePathClose; // Update with your image path for fam 3
         headingText = '\uD83D\uDC9A YAYY YOU\'RE IN CLOSE FAM! \uD83D\uDC9A';
         setBgColor('rgb(0, 111, 60)');
-        break;
-      case 'name4':
-        imageSrc = winter;
-        headingText = 'aint no way bro';
-        setBgColor('blanchedalmond')
-        break;
-      case 'name5':
-        imageSrc = chaewon;
-        headingText = 'aint no way bro';
-        setBgColor('blanchedalmond');
         break;
       default:
         // If name doesn't match any, display default values
@@ -178,7 +150,7 @@ function App() {
 const handleReset = () => {
   setName('');
   setImageSrc(thinking);
-  setHeadingText('What fam are you in?');
+  setHeadingText('\uD83D\uDC40 What family are you in? \uD83D\uDC40');
   setBgColor(`linear-gradient(to right, 
     rgb(191, 33, 47) 0%, 
     rgb(191, 33, 47) 33.3%, 
