@@ -37,11 +37,11 @@
   box-shadow: 5px 5px 10px rgba(0, 0, 0, .2);
 }
 
-.button:hover{
+.button:hover, .reset-button:hover{
   opacity:0.8;
 }
 
-.button:active{
+.button:active, .reset-button:active{
   opacity:0.5;
 }
 
